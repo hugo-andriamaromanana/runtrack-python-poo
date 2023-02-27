@@ -14,23 +14,23 @@ class Personnage:
         pos=(self.x,self.y)
         return f'Le personnage est en position {pos}'
 
-Personnage.x=0
-Personnage.y=0
+personnage=Personnage(0,0)
 
 print(f'Le personnage est en position {Personnage.afficher_position(Personnage)}')
 
-Personnage.move_right(Personnage)
-Personnage.move_right(Personnage)
-Personnage.move_right(Personnage)
+personnage.move_right()
+personnage.move_right()
+personnage.move_right()
 print(f'Le personnage est en position {Personnage.afficher_position(Personnage)}')
-Personnage.move_down(Personnage)
-Personnage.move_down(Personnage)
-Personnage.move_down(Personnage)
+personnage.move_down()
+personnage.move_down()
+personnage.move_down()
 print(f'Le personnage est en position {Personnage.afficher_position(Personnage)}')
-Personnage.move_up(Personnage)
-Personnage.move_up(Personnage)
-Personnage.move_up(Personnage)
+personnage.move_left()
+personnage.move_left()
+personnage.move_left()
 print(f'Le personnage est en position {Personnage.afficher_position(Personnage)}')
-Personnage.move_left(Personnage)
-Personnage.move_left(Personnage)
-Personnage.move_left(Personnage)
+personnage.move_up()
+personnage.move_up()
+personnage.move_up()
+print(f'Le personnage est en position {Personnage.afficher_position(Personnage)}')

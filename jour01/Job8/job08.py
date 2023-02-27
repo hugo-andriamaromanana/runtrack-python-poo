@@ -15,10 +15,10 @@ class Cercle:
         return f'Le rayon est {self.rayon} \n l aire est {self.aire(self)}\n la circonference est {self.circonference(self)}\n le diametre est {self.diametre(self)}'
 
 
-Cercle.rayon = 4
+cercle_4=Cercle(4)
 
 print(f' Le rayon est {Cercle.afficher_infos(Cercle)}')
 
-Cercle.rayon = 7
+cercle_7=Cercle(7)
 
 print(f' Le rayon est {Cercle.afficher_infos(Cercle)}')

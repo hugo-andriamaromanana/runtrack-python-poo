@@ -3,8 +3,7 @@ class Operation:
         self.nombre1 = nombre1
         self.nombre2 = nombre2
 
-Operation.nombre1 = 12
-Operation.nombre2 = 3
+nombre=Operation(3,7)
 
-print(f'Le nombre1 est {Operation.nombre1}')
-print(f'Le nombre2 est {Operation.nombre2}')
+print(f'le nombre 1 est {nombre.nombre1}')
+print(f'le nombre 2 est {nombre.nombre2}')

@@ -17,19 +17,15 @@ class Produit:
     def infos(self):
         return f'Le nom du produit est {self.nom} \n son prix est {self.prix} \n sa TVA est {self.TVA} \n son prix TTC est {self.CalculerPrixTTC(self)}'
 
-Produit.nom = 'Pomme'
-Produit.prix = 1.5
-Produit.TVA = 20
+pomme=Produit('Pomme', 1.5, 20)
 
 print(f'Le prix TTC de {Produit.nom} est {Produit.CalculerPrixTTC(Produit)}')
 
-Produit.nom = 'Poire'
-Produit.prix = 2.5
-Produit.TVA = 20
+poire=Produit('Poire', 2, 20)
 
 print(f'Le prix TTC de {Produit.nom} est {Produit.CalculerPrixTTC(Produit)}')
 
-Produit.ModifierNometPrix(Produit, 'Poire_deluxe', 3.5)
+poire.ModifierNometPrix('Poire_deluxe', 2.5)
 
 print(f'Le prix TTC de {Produit.nom} est {Produit.CalculerPrixTTC(Produit)}')
 

@@ -5,5 +5,8 @@ class Personne:
     def SePresenter(self):
         return f'Je suis {self.prenom} {self.nom}'
     
-print(Personne.SePresenter(Personne('John', 'Doe')))
-print(Personne.SePresenter(Personne('Jean', 'Dupont')))
+dude_1=Personne('John', 'Doe')
+dude_2=Personne('Jean', 'Dupont')
+
+print(f'Je suis {dude_1.SePresenter()}')
+print(f'Je suis {dude_2.SePresenter()}')
