@@ -13,11 +13,11 @@ class Point:
     def changer_y(self, y):
         self.y = y
 
-point=Point(3,4)
+point=Point(7,6)
 
 print(f'Le point est affiché {point.afficher_les_points()}')
 print(f'Le point x est affiché {point.afficher_x()}')
 print(f'Le point y est affiché {point.afficher_y()}')
-print(f'Le point x est changé {point.changer_x(3)}')
-print(f'Le point y est changé {point.changer_y(4)}')
+point.changer_x(3)
+point.changer_y(4)
 print(f'Le point est affiché {point.afficher_les_points()}')
