@@ -12,31 +12,31 @@ TVA= 0.2
 
 class Commande:
     def __init__(self, numero_de_commande,listes_de_plats_commande,statut= STATUS[0]):
-        self.numero_de_commande= numero_de_commande
-        self.listes_de_plats_commande= listes_de_plats_commande
-        self.statut= statut
+        self.__numero_de_commande= numero_de_commande
+        self.__listes_de_plats_commande= listes_de_plats_commande
+        self.__statut= statut
     def ajout_plat(self, plat):
-        self.listes_de_plats_commande[plat]= PLATS[plat]
+        self.__listes_de_plats_commande[plat]= PLATS[plat]
     def retirer_plat(self, plat):
-        self.listes_de_plats_commande.pop(plat)
+        self.__listes_de_plats_commande.pop(plat)
     def annuler_commande(self):
-        self.statut= STATUS[1]
-        self.listes_de_plats_commande= {}
+        self.__statut= STATUS[1]
+        self.__listes_de_plats_commande= {}
     def calculer_prix(self):
         prix= 0
-        for plat in self.listes_de_plats_commande:
+        for plat in self.__listes_de_plats_commande:
             prix+= PLATS[plat]
         return prix*(1+TVA)
     def etat_commande(self):
         return {
-            'numero_de_commande': self.numero_de_commande,
-            'listes_de_plats_commande': self.listes_de_plats_commande,
-            'statut': self.statut,
-            'prix': self.calculer_prix()
+            'numero_de_commande': self.__numero_de_commande,
+            'listes_de_plats_commande': self.__listes_de_plats_commande,
+            'statut': self.__statut,
+            'prix': self.__calculer_prix()
         }
     def payer_commande(self):
-        self.statut= STATUS[2]
-        self.listes_de_plats_commande= {}
+        self.__statut= STATUS[2]
+        self.__listes_de_plats_commande= {}
 
 def pretty(d, indent=0):
    for key, value in d.items():

@@ -1,32 +1,32 @@
 class Livre:
     def __init__(self,titre, auteur, nb_pages,disponible):
-        self.titre= titre
-        self.auteur= auteur
-        self.nb_pages= nb_pages
-        self.disponible= disponible
+        self.__titre= titre
+        self.__auteur= auteur
+        self.__nb_pages= nb_pages
+        self.__disponible= disponible
     def modify_attributes(self, titre, auteur, nb_pages):
-        if self.nb_pages>0 and type(self.nb_pages)==int:
-            self.titre= titre
-            self.auteur= auteur
-            self.nb_pages= nb_pages
+        if self.__nb_pages>0 and type(self.__nb_pages)==int:
+            self.__titre= titre
+            self.__auteur= auteur
+            self.__nb_pages= nb_pages
         else:
             print("Le nombre de pages doit être un entier positif")
     def print_attributes(self):
-        return f'Titre: {self.titre} Auteur: {self.auteur} Nombre de pages: {self.nb_pages}'
+        return f'Titre: {self.__titre} Auteur: {self.__auteur} Nombre de pages: {self.__nb_pages}'
     def emprunter(self):
-        if self.disponible:
-            self.disponible= False
+        if self.__disponible:
+            self.__disponible= False
             return "Livre emprunté"
         else:
             return "Livre non disponible"
     def rendre(self):
-        if self.disponible:
+        if self.__disponible:
             return "Livre déjà disponible"
         else:
-            self.disponible= True
+            self.__disponible= True
             return "Livre rendu"
     def est_disponible(self):
-        if self.disponible:
+        if self.__disponible:
             return "Livre disponible"
         else:
             return "Livre non disponible"
