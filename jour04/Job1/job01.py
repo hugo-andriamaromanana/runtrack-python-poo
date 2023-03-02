@@ -7,33 +7,34 @@ class Personne:
         self.age += other
         return self.age
 
-class Eleve:
+class Eleve(Personne):
     def __init__(self,nom):
-        self.eleve=Personne(nom)
+        super().__init__(nom)
     
     def aller_a_l_ecole(self):
-        return f'Je m\'appelle {self.eleve.nom} Je vais à l\'école'
+        self.age = 14
+        return f'Je m\'appelle {self.nom} Je vais à l\'école'
     
     def get_age(self):
-        return f'J\'ai {self.eleve.age} ans'
+        return f'J\'ai {self.age} ans'
     
-class Professeur:
+class Professeur(Personne):
     def __init__(self,nom,__matiere):
-        self.professeur=Personne(nom)
+        super().__init__(nom)
         self.matiere=__matiere
     
     def enseigner(self):
-        return f'Je m\'appelle {self.professeur.nom} Je suis professeur'
+        return f'Je m\'appelle {self.nom} Je suis professeur'
     
     def get_age(self):
-        return f'J\'ai {self.professeur.age} ans'
+        return f'J\'ai {self.age} ans'
 
     def enseigner(self):
-        return f'Je m\'appelle {self.professeur.nom} Je suis professeur de {self.matiere}'
-    
+        return f'Je m\'appelle {self.nom} Je suis professeur de {self.matiere}'
+
 personne_1=Eleve('Jean')
 print(personne_1.aller_a_l_ecole())
 print(personne_1.get_age())
 personne_2=Professeur('Leo','Mathématiques')
-print(personne_2.enseigner())
 print(personne_2.get_age())
+print(personne_2.enseigner())
