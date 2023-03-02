@@ -1,4 +1,7 @@
 class Forme:
+    def  __init__(self) -> None:
+        pass
+
     def aire(self,hauteur,largeur):
         return 0
 
