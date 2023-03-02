@@ -6,20 +6,22 @@ class Personnage:
     def subirDegats(self, degats):
         print(f"{self.nom} subit {degats} points de dégâts !")
         self.vie -= degats
+
     def attaquer(self, ennemi):
         print(f"{self.nom} attaque {ennemi.nom} !")
         ennemi.subirDegats(self.vie)
 
-
     def estVivant(self):
         return self.vie > 0
-    
+
+
 class Jeu:
     def __init__(self):
         self.niveau = 0
 
     def choisirNiveau(self):
-        self.niveau = int(input("Choisissez le niveau de difficulté (1, 2 ou 3): "))
+        self.niveau = int(
+            input("Choisissez le niveau de difficulté (1, 2 ou 3): "))
 
     def lancerJeu(self):
         self.choisirNiveau()
@@ -44,6 +46,7 @@ class Jeu:
             print("Vous avez gagné !")
         else:
             print("Vous avez perdu !")
+
 
 jeu = Jeu()
 jeu.lancerJeu()
